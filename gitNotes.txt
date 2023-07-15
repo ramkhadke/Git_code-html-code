@@ -1,0 +1,119 @@
+Install git
+
+>> apt-get update
+>> apt-get install git-core
+>> git --version
+Installing GIT - apt-get install git
+Telling the GIT to track this folder - git init
+Colors – Red color = Files in working directory
+Green color = Files in staging / cache Area
+Status Check – git status (for checking the tracking of files)
+Commit Id’s – generally called as SHAW1 number
+----------------------------------------------------------------------
+git init
+
+>> ls –a (or) ls –al
+>> git config –-global user.name “XXnameXX”
+>> git config –-global user.email “XXemail IDXX”
+>> git add filename (or) .[for adding complete files]
+>> git commit –m “message for that task”
+>> git commit –am “message for the task”
+>> git log - -oneline
+>> git show commitid
+>> vi .gitignore
+*.html
+*.jpg
+! filename.html
+>> “git add –f filename”
+>> “git checkout filename”
+----------------------------------------------------------------------
+
+Git server installation
+
+>> JAVA 8 version need to be installed
+>> Terminal should be updated
+>> Should have gitbucket .war should be downloaded
+>> IP Address should be Reserved and should fix manually
+>> Change to Root user - sudo su –root
+>> Install the Vim software – apt-get install vim
+>> apt–get install software –properties –common
+>> apt-get update
+>> apt-get install default-jre
+>> apt-get install default-jdk
+>> add-apt-repository – rppa:webupdsteam/java
+>> apt-get update
+>> apt-get install oracle-java8-installer
+>> java --version
+>> Download Gitbucket.war
+>> Go to the path were the gutbucket.war file was situated
+>> Java –jar gutbucket.war
+>> java –jar gutbucket.war --port =8018
+>> apt – get install git
+------------------------------------------------------------------------
+
+Using local git bucket
+
+>> mkdir myproject – Create a directory
+>> cd myproject – navigate to directory
+>> git init – initialize the git
+>> touch tarun – create a file in myproject
+>> git status
+>> git add tarun
+>> git commit –m ‘commit message’
+>> git log
+>> gibucket – sign In – root/root (username & password)
+>> Goto system Adminstration – New user – Create user with credentials – sign
+out - sign in with newly created user
+>> New repository - Create a repository
+>> git remote add origin URL
+>> git push –u origin master
+>> View the file called “.gitbucket” (hidden folder)
+>> Give the command “- tree .gitbucket “ to view files in the repository
+--------------------------------------------------------------------------
+
+Git Branches
+
+>> git branch
+>> git branch newbranchname
+>> git checkout branchtochange
+>> git merge branchnametomerge
+>> git checkout master
+>> git branch –D branchname
+>> git push origin --delete branchname
+---------------------------------------------------------------------
+
+Stash Area
+
+>> git add .
+>> git stash save filename
+>> git stash list – To view the stashed files
+Play with data in Stash Area
+>> Copy + paste = Take a copy from stash area and use it in normally git stash
+apply stashID
+>> Cut + paste = Move a file from stash and use it normally git stash pop stashID
+>> Delete = Remove files from stash Area
+>> git stash drop stashID
+-----------------------------------------------------------------------
+
+Creating version tags
+
+>> git tag versionnumber = Creating a version tag
+>> git tag = Wrapping the files and pushing into version
+>> git push –u myproject versionnumber = Pushing into github
+>> git tag –d versionnumber = Remove versions locally
+>> git push –u myproject --delete versionnumber = Delete the release in the git
+hub
+Email Notification
+>> Whatever happens in the github will be notified through email
+>> Steps to activate email notification
+>> Login into Git Hub - myproject – Settings – Notifications – Add - Email
+Address
+----------------------------------------------------------------------
+
+Backup and restore
+
+>> For taking the backup of the files of the git bucket .It is a hidden folder.
+>> ls –a (View hidden files)
+>> open the .gitbucket fil
+>> There we can see the files which were pushed
+---------------------------------------------------------------------
